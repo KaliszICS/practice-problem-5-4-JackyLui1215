@@ -35,6 +35,7 @@ class Notes {
 		//using split
 
 		//var.split(String delimiter) -> String[] with each element being seperated by the delimiter
+		//Careful - delimiter is regular expression which often treats symbols in a special way.
 
 		//delimiter is a string that we are searching to use as a way to break up our string into elements for an array.
 		//the delimiter will be removed from the result.
@@ -42,18 +43,18 @@ class Notes {
 		String word;
 		word = "Hello World";
 
-		String[] arr = word.split("ll"); //split by each word (removes the spaces)
-
+		String[] arr2 = word.split("ll"); //split by each word (removes the spaces)
+		// ["He", "o World"]
 
 		//prints out all of our elements on seperate lines
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
+		for (int i = 0; i < arr2.length; i++) {
+			System.out.println(arr2[i]);
 		}
 
-		arr = word.split(""); //splits each letter into its own element
+		arr2 = word.split(""); //splits each letter into its own element
 
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
+		for (int i = 0; i < arr2.length; i++) {
+			System.out.println(arr2[i]);
 		}
 	}
 }
